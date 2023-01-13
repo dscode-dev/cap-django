@@ -3,10 +3,10 @@ from django.shortcuts import render
 # Create your views here.
 
 def home(request):
-    return render(request, 'global/home.html')
+    return render(request, 'pages/home.html')
 
 def contact(request):
-    return render(request, 'example/contact.html')
+    return render(request, 'pages/contact.html')
 
 def about(request):
-    return render(request, 'example/about.html')
+    return render(request, 'pages/about.html')
