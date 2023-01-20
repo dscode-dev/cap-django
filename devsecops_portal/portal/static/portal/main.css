@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#dash, #dash i,
+#forms, #forms i,
+#forum, #forum i,
+#support, #support i,
+#admin, #admin i {
+    color: var(--text-color);
+}
+
+:root {
+    --primary-color-light: #04c3977a;
+    --primary-color-dark: #04c397;
+    --background-color: #EDF6F854;
+    --box-color: #FFFFFF;
+    --text-color: #2a2d2d;
+    --text-color-light: #dddddd;
+    --text-title:  #1a1a1a;
+   
+    --border-color: #EEEEEEbb;
+}
+
+body {
+    background: var(--background-color);
+}
+
+#main-container {
+    width: 100%;
+    height: 94.1vh;
+}
+
+.header-container {
+    width: 100%;
+    height: 3.5rem;
+
+    border-bottom: 0.4px solid var(--border-color);
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+.header-section-title {
+    width: 11%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+
+    align-items:center;
+    justify-content: center;
+    background: var(--primary-color-dark);
+}
+.header-section-title h3 {
+    font-size: 12pt;
+    font-family: 'Slabo 27px', serif;
+    color: var(--text-color-light);
+}
+.header-section-title i {
+    color: white;
+}
+.header-container .container-menu-top {
+    width: 30%;
+    height: 100%;
+}
+.container-menu-top .nav-menu-items {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--background-color);
+}
+.nav-menu-items a {
+    width: fit-content;
+    height: fit-content;
+
+    font-size: 10pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: var(--text-color-light);
+
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+
+    transition: 0.3s;
+}
+.nav-menu-items a i {
+    font-size: 13pt;
+    color: var(--text-color-light);
+    
+    transition: 0.3s;
+} 
+
+.nav-menu-items a:hover i,
+.nav-menu-items a:hover {
+    color:var(--text-color);
+}
+
+#home-content {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 11% 78% 11%;
+}
+#home-content .aside-menu-selection-admin {
+    width: 100%;
+    height: 100%;
+
+    background: var(--primary-color-dark);
+}
+#home-content .section-content-admin {
+    width: 100%;
+    height: 100%;
+
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+.section-content-admin .metrics-blocks {
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    flex-direction: column;
+}
+.metrics-blocks h3 {
+    font-size: 13pt;
+    font-family: 'Slabo 27px', serif;
+}
+.section-content-admin .metrics-blocks .metrics-list {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
