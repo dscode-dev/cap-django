@@ -1,0 +1,113 @@
+<section class="container-status-customer">
+  <header>
+    <h3>SOAR Integration</h3>
+    <span>Activation Status</span>
+  </header>
+  <table class="table">
+    <tr class="head-table">
+      <th>CUSTOMER</th>
+      <th>SIEM</th>
+      <th>STATUS</th>
+    </tr>
+  </table>
+
+  <script>
+
+    const dado = [
+        {
+            'customer': 'ACSC',
+            'siem': 'RSA',
+            'status': 'Activated'
+        },
+        {
+            'customer': 'Care Plus',
+            'siem': 'RSA',
+            'status': 'Activated'
+        },
+        {
+            'customer': 'Leroy Merlin',
+            'siem': 'RSA',
+            'status': 'Activated'
+        },
+        {
+            'customer': 'Porto Bank',
+            'siem': 'Securonix',
+            'status': 'Activated'
+        },
+        {
+            'customer': 'Bocom BBM',
+            'siem': 'RSA_NWServer',
+            'status': 'Activated'
+        },
+        {
+            'customer': 'NTS',
+            'siem': 'RSA',
+            'status': 'Disabled'
+        },
+        {
+            'customer': 'DATASUS',
+            'siem': 'RSA Netwitness',
+            'status': 'Activated'
+        },
+        {
+            'customer': 'Assaí',
+            'siem': 'RSA_NWServer',
+            'status': 'Activated'
+        },
+        {
+            'customer': 'SEBREA-PE',
+            'siem': 'Securonix',
+            'status': 'Activated'
+        },
+        {
+            'customer': 'SEBRAE-MT',
+            'siem': 'Securonix',
+            'status': 'Activated'
+        }
+        
+    ]
+    const table = document.querySelector('.table')
+    aux = 0
+   
+
+    dado.map(item => {
+        const tag_tr = document.createElement('tr')
+        tag_tr.classList.add('item-table')
+
+        const customer_td = document.createElement('td')
+        let text_td = document.createTextNode(item['customer'].toString().toUpperCase())
+        customer_td.appendChild(text_td)
+
+        const siem_td = document.createElement('td')
+        text_td = document.createTextNode(item['siem'].toString())
+        siem_td.appendChild(text_td)
+
+        const status_td = document.createElement('td')
+        text_td = document.createTextNode(item['status'].toString())
+        status_td.appendChild(text_td)
+
+        tag_tr.appendChild(customer_td)
+        tag_tr.appendChild(siem_td)
+        tag_tr.appendChild(status_td)
+        
+        table.appendChild(tag_tr)
+
+        if (!aux) {
+            tag_tr.classList.add('bg-dark')
+            aux = 1
+        } 
+        else {
+            tag_tr.classList.add('bg-white')
+            aux = 0
+        }
+
+        if (item['status'] == 'Activated'){
+            status_td.classList.add('color-green')
+        }
+        else {
+            status_td.classList.add('color-gray')
+        }
+    })
+
+  </script>
+</section>

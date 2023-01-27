@@ -1,0 +1,19 @@
+.container-logo {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--background-color);
+}
+.container-logo h3 {
+    font-size: 12pt;
+    font-family: 'Slabo 27px', serif;
+    color: var(--text-color);
+}
+.container-logo i {
+    color: var(--text-color);
+}

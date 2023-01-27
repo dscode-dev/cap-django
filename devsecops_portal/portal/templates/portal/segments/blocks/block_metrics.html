@@ -1,0 +1,81 @@
+<div class="container-blocks-metrics">
+  <header class="title-blocks-metrics">
+      <h3>Real-Time</h3>
+  </header>
+  <ul class="metrics-list">
+    <li class="metrics-block" id="first-block">
+      <div class="metrics-item-description">
+        <div class="item-description">
+          <span class="metrics-block-count">157.000</span>
+          <p class="metric-description">Attended Ticket</p>
+        </div>
+          
+        <i class="material-icons">done_all</i>
+      </div>
+      <div class="footer-block">
+        <div class="counting-metrics">
+          <span class="{% if count > 0 %}positive{% else %}negative{% endif %}">{{count}}%</span>
+          Compared to previous month
+        </div>
+        <i class="material-icons">download</i>
+      </div>
+    </li>
+    
+    <li class="metrics-block">
+      <div class="metrics-item-description">
+        <div class="item-description">
+          <span class="metrics-block-count">08</span>
+          <p class="metric-description">Open Tickets</p>
+        </div>
+        
+        <i class="material-icons">open_with</i>
+      </div>
+      
+      <div class="footer-block">
+        <div class="counting-metrics">
+          <span class="{% if count_two > 0 %}positive{% else %}negative{% endif %}">{{count_two}}%</span>
+          Compared to previous month
+        </div>
+        <i class="material-icons">download</i>
+      </div>
+    </li>
+    
+    <li class="metrics-block">
+      <div class="metrics-item-description">
+        <div class="item-description">
+          <span class="metrics-block-count">750</span>
+          <p class="metric-description">Disabled Tickets</p>
+        </div>
+        
+        <i class="material-icons">disabled_by_default</i>
+      </div>
+      
+      <div class="footer-block">
+        <div class="counting-metrics">
+          <span class="{% if count_three > 0 %}positive{% else %}negative{% endif %}">{{count_three}}%</span>
+          Compared to previous month
+        </div>
+        <i class="material-icons">download</i>
+      </div>
+    </li>
+    
+    <li class="metrics-block">
+      <div class="metrics-item-description">
+        <div class="item-description">
+          <span class="metrics-block-count">80</span>
+          <p class="metric-description">Signed Tickets</p>
+        </div>
+        
+        <i class="material-icons">account_tree</i>
+      </div>
+      
+      <div class="footer-block">
+        <div class="counting-metrics">
+          <span class="{% if count_four > 0 %}positive{% else %}negative{% endif %}">{{count_four}}%</span>
+          Compared to previous month
+        </div>
+        <i class="material-icons">download</i>
+      </div>
+    </li>
+  </ul>
+</div>

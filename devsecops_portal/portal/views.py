@@ -24,6 +24,10 @@ def support(request):
 
 def admin(request):
     return render(request, 'portal/pages/admin.html', {
-        "page": "admin"
+        "page": "admin",
+        "count": +3.35,
+        "count_two": +6.28,
+        "count_three": -1.5,
+        "count_four": +10.35,
     })
 

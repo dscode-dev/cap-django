@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
+    
 }
 
 #dash, #dash i,
@@ -11,15 +13,64 @@
 #admin, #admin i {
     color: var(--text-color);
 }
+.positive {
+    background-color: #7dd1996f;
+    color: var(--green-color-dark);
+}
+.negative {
+    background-color: rgba(246, 126, 126, 0.831);
+    color: rgb(148, 31, 31);
+}
+
+.current-date-active {
+    transform: scale(1.12);
+    border: 2px solid var(--green-color-light);
+}
+
+.on-notice-a{
+    background-color: #1C84C6;
+    color: white;
+}
+.on-notice-b{
+    background-color: #F8AC59;
+    color: white;
+}
+.on-notice-c{
+    background-color: #6CB8E4;
+    color: white;
+}
+.on-notice-d{
+    background-color: #D1DADe;
+    color: white;
+}
+
+.bg-dark {
+    background-color: #F4F7F9;
+}
+.bg-white {
+    background-color: white;
+}
+.color-green {
+    color: var(--green-color-dark);
+}
+.color-gray {
+    color: #757575;
+}
+
 
 :root {
-    --primary-color-light: #04c3977a;
-    --primary-color-dark: #04c397;
+    --green-color-dark: #18A689;
+    --green-color-light: #18a68a99;
+    --primary-color-dark: #263949;
+    --secudary-color-dark: #293846;
     --background-color: #EDF6F854;
     --box-color: #FFFFFF;
-    --text-color: #2a2d2d;
-    --text-color-light: #dddddd;
-    --text-title:  #1a1a1a;
+    --text-color: #1A1A1A;
+    --text-color-dark: #b7c3c3;
+    --text-color-light: #DDFFFF;
+    --text-title:  #676A6C;
+    --text-description: #8f9193c5;
+    --border-color: #cbd6e24c;
    
     --border-color: #EEEEEEbb;
 }
@@ -30,7 +81,7 @@ body {
 
 #main-container {
     width: 100%;
-    height: 94.1vh;
+    height: 94vh;
 }
 
 .header-container {
@@ -45,107 +96,35 @@ body {
 
     justify-content: space-between;
 }
-.header-section-title {
-    width: 11%;
-    height: 100%;
-    
-    display: flex;
-    flex-direction: column;
 
-    align-items:center;
-    justify-content: center;
-    background: var(--primary-color-dark);
-}
-.header-section-title h3 {
-    font-size: 12pt;
-    font-family: 'Slabo 27px', serif;
-    color: var(--text-color-light);
-}
-.header-section-title i {
-    color: white;
-}
-.header-container .container-menu-top {
-    width: 30%;
-    height: 100%;
-}
-.container-menu-top .nav-menu-items {
+/* Block common configuration */
+.block-case-container,
+.block-forum-container {
     width: 100%;
     height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--background-color);
-}
-.nav-menu-items a {
-    width: fit-content;
-    height: fit-content;
-
-    font-size: 10pt;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-decoration: none;
-    color: var(--text-color-light);
-
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-
-    transition: 0.3s;
-}
-.nav-menu-items a i {
-    font-size: 13pt;
-    color: var(--text-color-light);
-    
-    transition: 0.3s;
-} 
-
-.nav-menu-items a:hover i,
-.nav-menu-items a:hover {
-    color:var(--text-color);
-}
-
-#home-content {
-    width: 100%;
-    height: 100%;
-
-    display: grid;
-    grid-template-columns: 11% 78% 11%;
-}
-#home-content .aside-menu-selection-admin {
-    width: 100%;
-    height: 100%;
-
-    background: var(--primary-color-dark);
-}
-#home-content .section-content-admin {
-    width: 100%;
-    height: 100%;
-
-    padding: 3rem;
 
     display: flex;
     flex-direction: column;
 
-    align-items: center;
-}
-.section-content-admin .metrics-blocks {
-    width: 100%;
-    height: 20%;
+    justify-content: space-between;
+    padding: 15px;
 
-    display: flex;
-    flex-direction: column;
+    background-color: white;
 }
-.metrics-blocks h3 {
-    font-size: 13pt;
-    font-family: 'Slabo 27px', serif;
-}
-.section-content-admin .metrics-blocks .metrics-list {
+.block-case-container header,
+.block-forum-container header {
     width: 100%;
-    height: 100%;
+    height: 30px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+.block-case-container header h3,
+.block-forum-container header h3 {
+    font-size: 11pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
 
-
+    color: var(--text-color);
+}

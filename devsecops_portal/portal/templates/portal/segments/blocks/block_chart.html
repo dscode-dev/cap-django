@@ -1,0 +1,49 @@
+<section class="container-chart">
+  <header class="title-chart">
+    <h3>Frequents Erros</h3>
+    <i class="material-icons">error</i>
+  </header>
+  <section class="content-chart">
+    <canvas id="myChart" width="800" height="600"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById('myChart').getContext('2d')
+      const myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+          datasets: [
+            {
+              label: 'E-mail Sending',
+              data: [2, 6, 2, 10, 8, 14, 12],
+              backgroundColor: ['rgba(24,166,137, 0.2)', 'rgba(24,166,137, 0.2)', 'rgba(24,166,137, 0.2)', 'rgba(24,166,137, 0.2)', 'rgba(24,166,137, 0.2)', 'rgba(24,166,137, 0.2)', 'rgba(24,166,137, 0.2)'],
+              borderColor: ['rgb(24,166,137)', 'rgb(24,166,137)', 'rgb(24,166,137)', 'rgb(24,166,137)', 'rgb(24,166,137)', 'rgb(24,166,137)', 'rgb(24,166,137)'],
+              borderWidth: 1
+            },
+            {
+              label: 'Invalid HTML',
+              data: [1, 5, 3, 9, 7, 13, 11],
+              backgroundColor: ['rgba(28,132,198,0.2)', 'rgba(28,132,198,0.2)', 'rgba(28,132,198,0.2)', 'rgba(28,132,198,0.2)', 'rgba(28,132,198,0.2)', 'rgba(28,132,198,0.2)', 'rgba(28,132,198,0.2)'],
+              borderColor: ['rgb(28,132,198)', 'rgb(28,132,198)', 'rgb(28,132,198)', 'rgb(28,132,198)', 'rgb(28,132,198)', 'rgb(28,132,198)', 'rgb(28,132,198)'],
+              borderWidth: 1
+            },
+            {
+              label: 'Communication with SNOW',
+              data: [14, 17, 19, 15, 18, 20, 16],
+              backgroundColor: ['rgba(209,218,222, 0.2)', 'rgba(209,218,222, 0.2)', 'rgba(209,218,222, 0.2)', 'rgba(209,218,222, 0.2)', 'rgba(209,218,222, 0.2)', 'rgba(209,218,222, 0.2)', 'rgba(209,218,222, 0.2)'],
+              borderColor: ['rgb(209,218,222)', 'rgb(209,218,222)', 'rgb(209,218,222)', 'rgb(209,218,222)', 'rgb(209,218,222)', 'rgb(209,218,222)', 'rgb(209,218,222)'],
+              borderWidth: 1
+            }
+          ]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      })
+    </script>
+  </section>
+</section>

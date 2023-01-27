@@ -1,97 +1,38 @@
 {% extends 'global/base.html' %}
 {% block title %}
-  Home
+  Admin
 {% endblock %}
 
 {% block content_page %}
-  <div id="home-content">
-    <aside class="aside-menu-selection-admin">
-      <header class="aside-head">
-        <img src="" alt="" />
-        <h5>Nome do Usuário</h5>
-        <span>Atividade</span>
-      </header>
+  <div id="admin-container">
+    <aside class="aside-menu-admin">
+      {% include 'portal/segments/blocks/block_username.html' %}
+      {% include 'portal/segments/aside_menu/aside_menu.html' %}
     </aside>
+    
+    <section class="section-blocks-admin">
+      <section class="container-admin-block-a">
+        {% include 'portal/segments/blocks/block_forum.html' %}
+        {% include 'portal/segments/blocks/block_sobreaviso.html' %}
+      </section>
 
-    <section class="section-content-admin">
-      <article class="metrics-blocks">
-        <h3>Real-Time</h3>
-        <ul class="metrics-list"> 
-          <li class="metrics-block" id="first-block">
-            <div class="metrics-item-description">
-              <div class="item-description">
-                <span class="metrics-block-count">157.000</span>
-                <p class="metric-description">Tickets Atendidos</p>
-              </div>
+      <section class="container-blocks-metrics-admin">
+        {% include 'portal/segments/blocks/block_operations.html' %}
+      </section>
 
-              <i class="material-icons">done_all</i>
-            </div>
+      <section class="container-admin-block-b">
+        {% include 'portal/segments/blocks/block_chart.html' %}
+        {% include 'portal/segments/blocks/block_status_customer.html' %}
+        {% include 'portal/segments/blocks/block_case.html' %}
+      </section>
 
-            <div class="counting-metrics">
-              <span>+3.35%</span>
-              Em Relação ao mês anterior
-            </div>
-          </li>
-
-          <li class="metrics-block">
-            <div class="metrics-item-description">
-              <div class="item-description">
-                <span class="metrics-block-count">08</span>
-                <p class="metric-description">Tickets Abertos</p>
-              </div>
-
-              <i class="material-icons">open_with</i>
-            </div>
-
-            <div class="counting-metrics">
-              <span>+3.35%</span>
-              Em Relação ao mês anterior
-            </div>
-          </li>
-
-          <li class="metrics-block">
-            <div class="metrics-item-description">
-              <div class="item-description">
-                <span class="metrics-block-count">08</span>
-                <p class="metric-description">Tickets Desabilitados</p>
-              </div>
-
-              <i class="material-icons">disabled_by_default</i>
-            </div>
-
-            <div class="counting-metrics">
-              <span>-1.35%</span>
-              Em Relação ao mês anterior
-            </div>
-          </li>
-
-          <li class="metrics-block">
-            <div class="metrics-item-description">
-              <div class="item-description">
-                <span class="metrics-block-count">80</span>
-                <p class="metric-description">Tickets em Atendimento</p>
-              </div>
-
-              <i class="material-icons">
-                account_tree
-                </i>
-            </div>
-
-            <div class="foot-block">
-
-              <div class="counting-metrics">
-                <span>10.35%</span>
-                Em Relação ao mês anterior
-              </div>
-              <i class="material-icons">download</i>
-            </div>
-          </li>
-        </ul>  
-      </article>
-
-
+      <section class="container-admin-block-c">
+      </section>
     </section>
 
-
+    <aside class="container-feed-admin">
+      {% include 'portal/segments/blocks/block_notes.html' %}
+      {% include 'portal/segments/blocks/block_logs.html' %}
+    </aside>
   </div>
 {% endblock %}

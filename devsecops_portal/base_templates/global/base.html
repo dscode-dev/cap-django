@@ -1,18 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-    {% include 'portal/segments/head.html'%}
+    {% include 'portal/segments/head/head.html'%}
     <title>{% block title %}{% endblock title %} | DevSecOps</title>
 </head>
 
 <body>
     <header class="header-container">
-        {% include 'portal/segments/header.html' %}
+        {% include 'portal/segments/header/header.html' %}
     </header>
     <main id="main-container">
         {% block content_page %}{% endblock content_page %}
     </main>
-</body>
 
+    <script src="{% static 'portal/calendar/calendar.js' %}"></script>
+</body>
 </html>

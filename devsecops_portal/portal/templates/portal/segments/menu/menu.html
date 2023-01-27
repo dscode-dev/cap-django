@@ -1,0 +1,22 @@
+<nav class="nav-menu-items">
+    <a href="{% url 'index' %}" id="{% if page == "dash" %}dash{% endif %}">
+        <i class="material-icons">dashboard</i>
+        DASHBOARD
+    </a>
+    <a href="{% url 'forms' %}" id="{% if page == "forms" %}forms{% endif %}">
+        <i class="material-icons">list_alt</i>
+        FORMS
+    </a>
+    <a href="{% url 'forum' %}"id="{% if page == "forum" %}forum{% endif %}">
+        <i class="material-icons">forum</i>
+        FORUM
+    </a>
+    <a href="{% url 'support' %}" id="{% if page == "support" %}support{% endif %}">
+        <i class="material-icons">psychology</i>
+        SUPPORT
+    </a>
+    <a href="{% url 'admin' %}" id="{% if page == "admin" %}admin{% endif %}">
+        <i class="material-icons">settings</i>
+        <strong>ADMIN</strong>
+    </a>
+</nav>

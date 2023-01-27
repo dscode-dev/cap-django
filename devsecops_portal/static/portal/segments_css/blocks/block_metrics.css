@@ -1,0 +1,114 @@
+.container-blocks-metrics {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 20px;
+}
+.title-blocks-metrics {
+    width: 100%;
+    height: 40px;
+}
+.title-blocks-metrics h3 {
+    font-size: 13pt;
+    font-family: 'Slabo 27px', serif;
+}
+.metrics-list {
+    width: 100%;
+    height: 90%;
+
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+
+    justify-content: space-between;
+}
+#first-block{
+    background-color: #DFF4E6;
+}
+.metrics-list .metrics-block {
+    height: 100px;
+    padding: 10px 20px;
+
+    background-color: white;
+    list-style: none;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.metrics-item-description {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.metrics-item-description .item-description span{
+    font-size: 13pt;
+    font-weight: 600;
+    color: var(--text-color);
+}
+.metrics-item-description .item-description p {
+    font-size: 10pt;
+    color: var(--text-color-dark);
+
+    margin-top: 8px;
+}
+.metrics-item-description i {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color:var(--green-color-light);
+    border-radius: 50%;
+
+    color: white;
+}
+.metrics-block .footer-block {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 06px;
+}
+.metrics-block .counting-metrics {
+    width: 80%;
+
+    display: flex;
+    align-items: center;
+    
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.metrics-block .counting-metrics span {
+    width: 55px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 8pt;
+}
+.metrics-block .counting-metrics {
+    font-size: 9pt;
+    color: var(--text-color-dark);
+}
+.metrics-block .footer-block i {
+    font-size: 14pt;
+    color: var(--text-color-dark);
+
+    margin-top: 5px;
+
+    transition: 0.3s;
+    cursor: pointer;
+}
+.metrics-block .footer-block i:hover {
+    color: var(--text-color);
+}

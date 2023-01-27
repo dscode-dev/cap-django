@@ -1,8 +1,25 @@
 {% extends 'global/base.html' %}
-{% block title %}Home{% endblock title %}
+{% block title %}
+  Home
+{% endblock %}
 
 {% block content_page %}
-    <section id="home-content">
-        
+  <section id="container-dashboard">
+    <section class="block-metrics">
+      {% include 'portal/segments/blocks/block_metrics.html' %}
     </section>
-{% endblock content_page %}
+
+    <section class="container-dash-block-a">
+      {% include 'portal/segments/blocks/block_status_customer.html' %}
+      {% include 'portal/segments/blocks/block_sobreaviso.html' %}
+    </section>
+
+    <section class="container-block-dash-app">
+      <header class="head-block-dash-app">
+        <h3>Tools</h3>
+        <span>Aplications</span>
+      </header>
+    </section>
+    
+  </section>
+{% endblock %}

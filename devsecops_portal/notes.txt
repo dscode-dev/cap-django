@@ -1,0 +1,27 @@
+Admin:
+- Aside-Right
+-- Notes
+-- Logs
+
+- Aside-Left
+-- Block Username
+-- Settings Menu
+
+- Content
+-- Overview Forum
+-- Cases List
+-- On Notice
+-- Activation Status
+-- Metrics - Operations
+---- Frequency of Errors
+---- Average Execution Time
+------ Manual Flow
+------ Semi-Auto Flow
+------ Automatic Flow
+
+
+
+Dashboard:
+- Metrics - Optional Downloads
+- Tools - Scripts Aux
+- Clients List - Disabled | Enabled

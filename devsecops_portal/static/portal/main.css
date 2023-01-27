@@ -1,0 +1,209 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+#dash, #dash i,
+#forms, #forms i,
+#forum, #forum i,
+#support, #support i,
+#admin, #admin i {
+    color: var(--text-color);
+}
+.positive {
+    background-color: #7dd1996f;
+    color: var(--green-color-dark);
+}
+.negative {
+    background-color: rgba(246, 126, 126, 0.831);
+    color: rgb(148, 31, 31);
+}
+
+.current-date-active {
+    transform: scale(1.15);
+}
+
+.on-notice-a{
+    background-color: #1C84C6;
+    color: white;
+}
+.on-notice-b{
+    background-color: #F8AC59;
+    color: white;
+}
+.on-notice-c{
+    background-color: #6CB8E4;
+    color: white;
+}
+.on-notice-d{
+    background-color: #D1DADe;
+    color: white;
+}
+
+.bg-dark {
+    background-color: #F4F7F9;
+}
+.bg-white {
+    background-color: white;
+}
+
+
+:root {
+    --green-color-dark: #18A689;
+    --green-color-light: #18a68a99;
+    --primary-color-dark: #263949;
+    --secudary-color-dark: #293846;
+    --background-color: #EDF6F854;
+    --box-color: #FFFFFF;
+    --text-color: #1A1A1A;
+    --text-color-dark: #b7c3c3;
+    --text-color-light: #DDFFFF;
+    --text-title:  #676A6C;
+    --text-description: #8f9193c5;
+    --border-color: #cbd6e24c;
+   
+    --border-color: #EEEEEEbb;
+}
+
+body {
+    background: var(--background-color);
+}
+
+#main-container {
+    width: 100%;
+    height: 94vh;
+}
+
+.header-container {
+    width: 100%;
+    height: 3.5rem;
+
+    border-bottom: 0.4px solid var(--border-color);
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.feed-content-admin .head-feed {
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.head-feed h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    color: var(--text-title);
+
+    margin-left: 6px;
+}
+.head-feed .icon-notify {
+    width: 28px;
+    height: 28px;
+
+    background-color: var(--green-color-dark);
+    font-size: 15pt;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+}
+
+.head-feed .icon-sync {
+    
+    color: var(--green-color-dark);
+    margin-left: 17.6%;
+    font-size: 17pt;
+
+    transition: 0.3s;
+    cursor: pointer;
+}
+.head-feed .icon-sync:hover {
+    background-color: transparent;
+    transform: rotate(45deg);
+}
+.head-feed .icon-sync:active {
+    color: #2a2a2ad3;
+}
+
+.feed-logs-admin .logs-list-admin {
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    gap: 15px;
+
+    overflow: hidden;
+}
+.logs-list-admin li {
+    width: 100%;
+
+    list-style: none;
+    padding: 10px 5px 5px 10px; 
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    cursor: pointer;
+}
+.logs-list-admin li h5 {
+    font-size: 10pt;
+    font-family:'Slabo 27px', serif ;
+    color: var(--text-title);
+}
+.logs-list-admin li p {
+    font-size: 09pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--text-description);
+}
+
+.logs-list-admin li i {
+    color: var(--green-color-light);
+}
+
+/* Block common configuration */
+.block-case-container,
+.block-forum-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    padding: 15px;
+
+    background-color: white;
+}
+.block-case-container header,
+.block-forum-container header {
+    width: 100%;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.block-case-container header h3,
+.block-forum-container header h3 {
+    font-size: 11pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+
+    color: var(--text-color);
+}

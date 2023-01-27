@@ -1,0 +1,82 @@
+.block-case-container header span {
+    font-size: 9pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    width: 50px;
+    height: 20px;
+    padding: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 3px;
+    background-color: var(--green-color-light);
+    color: white;
+}
+
+.items-case-block-a {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    overflow: auto;
+}
+.items-case-block-a .item-case-block-a {
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    border-bottom: 0.2px solid var(--border-color);
+    cursor: pointer;
+
+
+}.item-case-block-a i {
+    transition: 0.3s;
+}
+.item-case-block-a:hover i {
+    color: var(--green-color-dark);
+}
+
+.block-case-container button {
+    width: 100%;
+    height: 35px;
+
+    border: none;
+    border-radius: 3px;
+    
+    background-color: var(--green-color-dark);
+    color: white;
+    font-size: 11pt;
+
+
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.block-case-container button:hover {
+    background-color: var(--green-color-light);
+}
+.block-case-container button:active {
+    background-color: #16212a
+}
+.short-description {
+    font-size: 11pt;
+    font-family: 'Slabo 27px', serif;
+
+    color: var(--text-color);
+}
+.date-item-block {
+    font-size: 10pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--text-color-dark);
+
+    margin-top: 3px;
+}
