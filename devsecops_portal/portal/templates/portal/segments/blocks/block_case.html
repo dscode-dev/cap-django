@@ -4,45 +4,15 @@
     <span>Today</span>
   </header>
   <section class="items-case-block-a">
-    <div class="item-case-block-a">
-      <i class="material-icons">tag</i>
-      <div class="description-item-case">
-        <h5 class="short-description">CS0910290 - Short Description</h5>
-        <p class="date-item-block">January 23, 2023</p>
+    {% for item in cases %}
+      <div class="item-case-block-a">
+        <i class="material-icons">tag</i>
+        <div class="description-item-case">
+          <h5 class="short-description">{{item.case_number}} - {{item.short_description}}</h5>
+          <p class="date-item-block">{{item.case_date}}</p>
+        </div>
       </div>
-    </div>
-
-    <div class="item-case-block-a">
-      <i class="material-icons">tag</i>
-      <div class="description-item-case">
-        <h5 class="short-description">CS0910290 - Short Description</h5>
-        <p class="date-item-block">January 23, 2023</p>
-      </div>
-    </div>
-
-    <div class="item-case-block-a">
-      <i class="material-icons">tag</i>
-      <div class="description-item-case">
-        <h5 class="short-description">CS0910290 - Short Description</h5>
-        <p class="date-item-block">January 23, 2023</p>
-      </div>
-    </div>
-
-    <div class="item-case-block-a">
-      <i class="material-icons">tag</i>
-      <div class="description-item-case">
-        <h5 class="short-description">CS0910290 - Short Description</h5>
-        <p class="date-item-block">January 23, 2023</p>
-      </div>
-    </div>
-
-    <div class="item-case-block-a">
-      <i class="material-icons">tag</i>
-      <div class="description-item-case">
-        <h5 class="short-description">CS0910290 - Short Description</h5>
-        <p class="date-item-block">January 23, 2023</p>
-      </div>
-    </div>
+    {% endfor %}
   </section>
   <button class="btn-view-all-block-a">View all</button>
 </article>

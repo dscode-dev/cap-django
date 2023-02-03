@@ -24,7 +24,7 @@
 
 .current-date-active {
     transform: scale(1.12);
-    border: 2px solid var(--green-color-light);
+    border: 2px solid rgba(0, 0, 0, 0.771);
 }
 
 .on-notice-a{
@@ -55,6 +55,32 @@
 }
 .color-gray {
     color: #757575;
+}
+.invisible {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.low-color,
+.closed-color {
+    background-color: #F3F8FA;
+    color: #848D92;
+}
+.medium-color {
+    background-color: #FFF8ED;
+    color: #c39142;
+}
+.high-color {
+    background-color: #FFEAEF;
+    color: #97344b;
+}
+.open-color {
+    background-color: #F1FAEE;
+    color: var(--green-color-dark);
+}
+.running-color {
+    font-weight: bolder;
+    color: var(--green-color-dark);
 }
 
 

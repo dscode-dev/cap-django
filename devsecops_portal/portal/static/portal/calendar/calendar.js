@@ -5,15 +5,17 @@ lastDay = lastDayDate.toString().match(/^\d+/)[0]
 let current_month = date.getMonth()
 let current_day = date.toString().match(/\d\d/)[0]
 let current_year = date.getFullYear()
+firstDay = new Date(current_year, current_month, 1)
+
 
 const week_days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 
 const on_notice = {
-    "Mathaus": [6, 7, 8, 9, 10, 11, 12, 13],
-    "Fagner": [13, 14, 15, 16, 17, 18, 19, 20],
-    "Rafael": [1,2, 3, 4, 5, 20, 21, 22, 23, 24, 25, 26, 27],
-    "Darlan": [27, 28, 29, 30, 31]
+    "Mathaus": [3, 4, 5, 6, 7, 8, 9],
+    "Fagner": [10, 11, 12, 13, 14, 15, 16],
+    "Rafael": [17, 18, 19, 20, 21, 22, 23],
+    "Darlan": [1, 2, 24, 25, 26, 27, 28]
 }
 
 const tag_date = document.querySelector('.date-weekdays')
@@ -51,30 +53,42 @@ tag_div_btn_date.appendChild(tag_arrow_right)
 tag_date.appendChild(tag_div_btn_date)
 
 const list_monthdays = document.querySelector('.month-days-list')
-for (let i = 1; i <= parseInt(lastDay); i++) {
-    let tag_li = document.createElement('li')
-    let text_li = document.createTextNode(i.toString())
-    tag_li.appendChild(text_li)
-    list_monthdays.appendChild(tag_li)
+for (let i = 0; i < week_days.length; i++) {
+    if (firstDay.getDay() == i) {
+        for (let item = 1; item <= parseInt(lastDay); item++) {
+            let tag_li = document.createElement('li')
+            let text_li = document.createTextNode(item.toString())
+            tag_li.appendChild(text_li)
+            list_monthdays.appendChild(tag_li)
 
-    if(on_notice["Mathaus"].includes(i)){
-        tag_li.classList.add('on-notice-a')
-    }
-    
-    if(on_notice["Fagner"].includes(i)){
-        tag_li.classList.add('on-notice-b')
-    }
-    
-    if(on_notice["Rafael"].includes(i)){
-        tag_li.classList.add('on-notice-c')
-    }
-    
-    if(on_notice["Darlan"].includes(i)){
-        tag_li.classList.add('on-notice-d')
-    }
+            if (on_notice["Mathaus"].includes(item)) {
+                tag_li.classList.add('on-notice-a')
+            }
 
-    
-    if (i == current_day){
-        tag_li.classList.add('current-date-active')
+            if (on_notice["Fagner"].includes(item)) {
+                tag_li.classList.add('on-notice-b')
+            }
+
+            if (on_notice["Rafael"].includes(item)) {
+                tag_li.classList.add('on-notice-c')
+            }
+
+            if (on_notice["Darlan"].includes(item)) {
+                tag_li.classList.add('on-notice-d')
+            }
+
+
+            if (item == current_day) {
+                tag_li.classList.add('current-date-active')
+            }
+        }
+
+        break;
+    } else {
+        let tag_li = document.createElement('li')
+        let text_li = document.createTextNode("0")
+        tag_li.appendChild(text_li)
+        list_monthdays.appendChild(tag_li)
+        tag_li.classList.add("invisible")
     }
 }

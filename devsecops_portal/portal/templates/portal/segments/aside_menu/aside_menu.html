@@ -1,7 +1,17 @@
 <nav class="container-menu-aside">
-  <div class="item-menu">
-    <i class="material-icons">grid_view</i>
-    <a href="#" id="dashboar">Dashboard</a>
+  <div class="container-menu-arrow">
+    <div class="menu-arrow">
+      <div class="item-menu">
+        <i class="material-icons">grid_view</i>
+        <a href="{% url 'admin_overview' %}">Dashboards</a>
+      </div>
+
+      <i class="material-icons">navigate_next</i>
+    </div>
+    <div class="content-menu-arrow">
+      <a href="{% url 'admin_overview' %}" class="overview">Overview</a>
+      <a href="{% url 'admin_tickets' %}" class="tickets">Tickets</a>
+    </div>
   </div>
   <div class="item-menu">
     <i class="material-icons">group</i>

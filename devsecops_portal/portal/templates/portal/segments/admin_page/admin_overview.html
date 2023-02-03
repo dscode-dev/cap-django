@@ -1,0 +1,26 @@
+{% extends 'portal/pages/admin.html' %}
+{% block content_page_admin %}
+  <section class="section-blocks-admin">
+    <section class="container-admin-block-a">
+      {% include 'portal/segments/blocks/block_forum.html' %}
+      {% include 'portal/segments/blocks/block_sobreaviso.html' %}
+    </section>
+
+    <section class="container-blocks-metrics-admin">
+      {% include 'portal/segments/blocks/block_operations.html' %}
+    </section>
+
+    <section class="container-admin-block-b">
+      {% include 'portal/segments/blocks/block_chart.html' %}
+      {% include 'portal/segments/blocks/block_status_customer.html' %}
+      {% include 'portal/segments/blocks/block_case.html' %}
+    </section>
+
+    <section class="container-admin-block-c"></section>
+  </section>
+
+  <aside class="container-feed-admin">
+    {% include 'portal/segments/blocks/block_notes.html' %}
+    {% include 'portal/segments/blocks/block_logs.html' %}
+  </aside>
+{% endblock %}

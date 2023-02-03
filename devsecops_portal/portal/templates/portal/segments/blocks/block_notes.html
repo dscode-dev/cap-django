@@ -4,33 +4,11 @@
     <span>Today</span>
   </header>
   <ul class="list-block-notes">
+    {% for item in notes %}
     <li>
       <i class="material-icons">sticky_note_2</i>
-      <span class="desc-item-notes">Ativação de Cliente</span>
+      <span class="desc-item-notes">{{item.title}}</span>
     </li>
-    <li>
-      <i class="material-icons">sticky_note_2</i>
-      <span class="desc-item-notes">Integração de Cliente</span>
-    </li>
-    <li>
-      <i class="material-icons">sticky_note_2</i>
-      <span class="desc-item-notes">Alinhamento Interno</span>
-    </li>
-    <li>
-      <i class="material-icons">sticky_note_2</i>
-      <span class="desc-item-notes">Treinamento</span>
-    </li>
-    <li>
-      <i class="material-icons">sticky_note_2</i>
-      <span class="desc-item-notes">FUP DevSecOps</span>
-    </li>
-    <li>
-      <i class="material-icons">sticky_note_2</i>
-      <span class="desc-item-notes">Planejamento</span>
-    </li>
-    <li>
-      <i class="material-icons">sticky_note_2</i>
-      <span class="desc-item-notes">Ativação de Cliente</span>
-    </li>
+    {% endfor %}
   </ul>
 </section>

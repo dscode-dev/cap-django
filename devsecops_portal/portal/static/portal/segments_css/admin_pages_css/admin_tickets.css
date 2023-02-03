@@ -1,0 +1,186 @@
+.container-admin-tickets {
+    width: 88%;
+    height: 100%;
+
+    padding: 15px;
+    background-color: #F4F8F9;
+}
+.container-admin-tickets .head-admin-tickets {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.head-admin-tickets .title-tickets {
+    width: 50%;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+}
+.head-admin-tickets .title-tickets h1 {
+    font-size: 24pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+
+    color: var(--green-color-dark);
+}
+.head-admin-tickets .title-tickets i {
+    margin-left: 4px;
+    cursor: pointer;
+}
+.title-tickets .counter-tickets,
+.title-tickets .sort-tickets{
+    font-size: 10pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+
+    color: var(--title-color);
+    margin-left: 20px;
+}
+.head-admin-tickets .filter-tickets {
+    width: 50%;
+    height: fit-content;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+}
+.filter-tickets .btn-visualization {
+    width: 38px;
+    height: 40px;
+
+    padding: 15px;
+    background-color: white;
+    
+    border: none;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+.filter-tickets i,
+.filter-tickets span {
+    color: #98A2A8;
+    transition: 0.3s;
+}
+.btn-visualization .window {
+    font-size: 15pt;
+    transition: 0.3s;
+}
+.filter-tickets .btn-filter {
+    width: 100px;
+    height: 40px;
+
+    padding: 15px;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 10pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+
+    cursor: pointer;
+}
+.btn-filter:hover span,
+.btn-filter:hover i,
+.btn-visualization:hover i{
+    color: #48494a;
+} 
+.btn-filter i {
+    font-size: 16pt;
+}
+
+.container-admin-tickets .form-search-tickets {
+    width: 100%;
+    height: 09%;
+
+    padding: 10px 0 12px 0;
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 0.3px solid #d2d2d261;
+}
+.form-search-tickets form {
+    width: 90%;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.form-search-tickets form button {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background-color: transparent;
+    color: #98A2A8;
+
+    cursor: pointer;
+}
+.form-search-tickets form button i {
+    font-size: 22pt;
+    transition: 0.3s;
+}
+.form-search-tickets form button:hover i{
+    color: #818689;
+}
+
+.form-search-tickets form input {
+    width: 25%;
+    max-width: 40%;
+    height: 40px;
+
+    padding: 10px;
+
+    font-size: 12pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 400;
+
+    border: none;
+    background-color: transparent;
+    list-style: none;
+
+    outline: none;
+}
+.form-search-tickets button {
+    width: 8%;
+    height: 80%;
+
+    background-color: var(--green-color-dark);
+    color: white;
+
+    border: none;
+    border-radius: 3px;
+
+    font-size: 10pt;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.form-search-tickets button span {
+    font-size: 18pt;
+}
