@@ -1,27 +1,28 @@
-<section class="container-table-tickets">
+<section class="content-table-tickets">
   <table>
     <tr class="line-head-tickets">
-      <th>ID</th>
+    <th></th>
+    <th>ID</th>
     <th>DESCRIPTION</th>
     <th>CUSTOMER</th>
     <th>OWNER</th>
     <th>PRIORITY</th>
     <th>STATUS</th>
     <th>CREATED DATE</th>
+    <th></th>
   </tr>
   {% for item in tickets %}
     <tr class="line-content-tickets">
-      <td>
-        <input type="checkbox" name="aid" class="check-style" />
-        {{item.id}}
-      </td>
+      <td><input type="checkbox" name="aid" class="check-style"/></td>
+      <td>{{item.id}}</td>
       <td>{{item.description}}</td>
-      <td>{{item.customer}}</td>
+      <td>{{item.customer|upper}}</td>
       <td>{{item.owner}}</td>
       <td class="{% if item.priority == 'High' %}high-color{% elif item.priority == 'Medium'%}medium-color{% else %}low-color{% endif %}">{{item.priority}}</td>
       <td class="{% if item.status == 'Open' %}open-color{% elif item.status == 'Running'%}running-color{% else %}closed-color{% endif %}">{{item.status}}</td>
       <td>2023-02-03</td>
+      <td>...</td>
     </tr>
-    {% endfor %} 
+  {% endfor %} 
   </table>
 </section>

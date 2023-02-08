@@ -9,7 +9,6 @@
       <th>SIEM</th>
       <th>STATUS</th>
     </tr>
-
     {% for item in customers %}
         <tr class="{% if forloop.counter|divisibleby:2 %}item-table bg-dark{% else %}item-table bg-white{% endif %}">
             <td>{{item.customer_name}}</td>

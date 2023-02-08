@@ -8,6 +8,38 @@
 </head>
 
 <body>
+    <div class="hidden" id="forms-tickets">
+        <form action="/portal/admin/tickets/add/" method="POST">
+            {% csrf_token %}
+            <!--<label for="desc">Description</label>-->
+            <input type="text" name="desc" id="desc" placeholder="Ticket Description" required>
+            <!--<label for="client">Customer</label>-->
+            <input type="text" name="client" id="client" placeholder="Customer Name" required>
+            <!--<label for="owner">Owner</label>-->
+            <input type="text" name="owner" id="owner" placeholder="Ticket Owner" required>
+            <div class="selects">
+                <label for="priority">Priority</label>
+                <select name="priority" id="priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <option value="open">Open</option>
+                    <option value="running">Running</option>
+                </select>
+            </div>
+            <!--<select type="text" name="priority" id="priority" required>-->
+            <!--<input type="text" name="status" id="status" required>-->
+
+            <div class="buttons">
+                <button id="cancel" type="button">Cancel</button>
+                <button type="submit" id="save">Save</button>
+            </div>
+        </form>
+    </div>
+
     <header class="header-container">
         {% include 'portal/segments/header/header.html' %}
     </header>
@@ -16,5 +48,27 @@
     </main>
 
     <script src="{% static 'portal/calendar/calendar.js' %}"></script>
+    <script>
+        container_forms = document.getElementById("forms-tickets")
+        btn_cancel = document.getElementById("cancel")
+        btn_cancel.addEventListener('click', events => {
+            container_forms.classList.remove("forms-input-tickets");
+            container_forms.classList.add("hidden")
+        })
+
+        btn_save = document.getElementById("save")
+        btn_save.addEventListener('click', events => {
+            alert("Valores enviados!")
+            container_forms.classList.remove("forms-input-tickets")
+            container_forms.classList.add("hidden")
+        })
+
+        btn_add_ticket = document.getElementById("add-ticket")
+        btn_add_ticket.addEventListener('click', events => {
+            container_forms.classList.remove('hidden')
+            container_forms.classList.add('forms-input-tickets')
+        })
+    </script>
 </body>
+
 </html>
